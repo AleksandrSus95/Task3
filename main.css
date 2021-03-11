@@ -1,78 +1,125 @@
 *{
     padding: 0;
     margin: 0;
-    font-family: "Poppins-Regular", sans-serif;
+    font-family: "Roboto Condensedr", sans-serif;
     box-sizing: border-box
 }
-.container{
-  width: 100%;  
-  min-height: 100vh;
-  /* display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox; */
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  padding: 15px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-.Forgot-Password{
-    text-align: right;
-    padding-top: 8px;
-    padding-bottom: 31px
-}
-.autorisation{
-    font-family: Poppins-Medium;
-    font-size: 16px;
-    color: #fff;
-    line-height: 1.2;
-    justify-content: center;
-    align-items: center;
-    padding: 0 20px;
-    width: 10%;
-    height: 50px;
-}
-.autorisation:hover {
-    font-family: Poppins-Medium;
-    font-size: 16px;
-    color: #fff;
-    line-height: 1.2;
-    text-transform: uppercase;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0 20px;
-    width: 50%;
-    height: 50px;
-  }
-h1{
-    margin: 0px;
-    display: block;
-    font-family: Poppins-bold;
-    font-size: 39px;
-    color: #333333;
-    line-height: 1.2;
-    text-align: center;
-}
 body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
     background: #c7b39b url(img/bacFonts.png); /* Цвет фона и путь к файлу */
     color: #ffff; /* Цвет текста */
 }
-.LoginUser{
-    font-family: Poppins-Regular;
-    font-size: 14px;
-    color: #333333;
-    line-height: 1.5;
-    padding-left: 7px;
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 370px;
+    min-width: 500px;
+    border: 0px solid #f1f1f1;
+    background: #6fddff
 }
-.{
-    font-family: Poppins-Regular;
-    font-size: 14px;
-    color: #333333;
-    line-height: 1.5;
-    padding-left: 7px;
+.l1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #483ed491
+}
+
+label{
+    padding: 1px 20px;
+    margin: 0px 1px 1px;
+    color: #483ed491
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container1 {
+    display: flex;
+    flex-direction: column;
+    width: 190%;
+    padding: 10px;
+}
+
+input[type=text], input[type=password] {
+    padding: 15px 20px;
+    margin: 15px 10px 10px;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    border: 2px solid rgb(204, 204, 204);
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #059bff;
+    color: white;
+    padding: 14px 20px;
+    margin: 0px 10%;
+    border: none;
+    cursor: pointer;
+    width: 40%;
+    float: right;
+}
+button:hover {
+    background-color: #016db4;
+    opacity: 0.9;
+}
+
+.container3{
+    display: flex;
+    padding: 10px 20px 0px;
+}
+.container4{
+    display: flex;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+#message {
+    display:flex;
+    width: 50%;
+    background: #6fddff;
+    color: #000;
+    position: relative;
+    padding: 2px;
+    margin-top: 1px;
+}
+
+#message p {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px 35px;
+    font-size: 18px;
+}
+
+/* Add a green text color and a checkmark when the requirements are right */
+.valid {
+    color: #483ed491;
+}
+
+.valid:before {
+    position: relative;
+    left: 35px;
+    /* content: "&#10004;"; */
+}
+
+/* Add a red text color and an "x" icon when the requirements are wrong */
+.invalid {
+    color: red;
+}
+
+.invalid:before {
+    position: relative;
+    left: 35px;
+    /* content: "&#10006;"; */
 }
