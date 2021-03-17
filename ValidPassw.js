@@ -3,7 +3,7 @@ var letter = document.getElementById("letter");
 var capital = document.getElementById("capital");
 var number = document.getElementById("number");
 var length = document.getElementById("length");
-
+var specsym = document.getElementById("specsym");
 // When the user clicks on the password field, show the message box
 myInput.onfocus = function() {
   document.getElementById("message").style.display = "block";
@@ -17,7 +17,7 @@ myInput.onblur = function() {
 // When the user starts to type something inside the password field
 myInput.onkeyup = function() {
   // Validate lowercase letters
-  var lowerCaseLetters = /[a-z]/g;
+  var lowerCaseLetters = /[a-zа-яё]/g;
   if(myInput.value.match(lowerCaseLetters)) {
     letter.classList.remove("invalid");
     letter.classList.add("valid");
@@ -27,7 +27,7 @@ myInput.onkeyup = function() {
 }
 
   // Validate capital letters
-  var upperCaseLetters = /[A-Z]/g;
+  var upperCaseLetters = /[A-ZА-ЯЁ]/g;
   if(myInput.value.match(upperCaseLetters)) {
     capital.classList.remove("invalid");
     capital.classList.add("valid");
@@ -45,7 +45,15 @@ myInput.onkeyup = function() {
     number.classList.remove("valid");
     number.classList.add("invalid");
   }
-
+  // Validate numbers
+  var specsymbols = /[~!@#$%^&*_|?]/g;
+  if(myInput.value.match(specsymbols)) {
+    specsym.classList.remove("invalid");
+    specsym.classList.add("valid");
+  } else {
+    specsym.classList.remove("valid");
+    specsym.classList.add("invalid");
+  }
   // Validate length
   if(myInput.value.length >= 6) {
     length.classList.remove("invalid");
