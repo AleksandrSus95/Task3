@@ -1,43 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Log in form</title>
-    <link rel="stylesheet" href="main.css" type="text/css">
-</head>
+    <link rel="stylesheet" href="main.css" type="text/css" />
+  </head>
 
-<body>
-  <script src="ValidBrowser.js"></script>
+  <body>
+    <script src="ValidBrowser.js"></script>
     <form>
       <h1>LogIn</h1>
-        <div class="container1">
-          <label for="uname"><b>Username</b></label>
-          <input type="text" placeholder="Email" name="uname" required>
-            <script src="ValidEmail.js"></script>
-          <label for="psw"><b>Password</b></label>
-          <input type="password" id="psw" name="psw" pattern="(?=.*\d)(?=.*[a-zа-яё])(?=.*[A-ZА-ЯЁ])(?=.*[0-9])(?=.*[~!@#$%^&*_|?]).{6,25}" placeholder="Password" required>
-            <div id="message">
-              <label class="l1" id="letter" class="invalid">Low Register</label>
-              <label class="l1" id="capital" class="invalid">Hight Register</label>
-              <label class="l1" id="number" class="invalid">Numbers</label>
-              <label class="l1" id="length" class="invalid">Minimum 6 characters, max 25</label>
-              <label class="l1" id="specsym" class="invalid">Spec symbols</label>
-            </div>
-            <script src="ValidPassw.js"></script>
+      <div class="container1">
+        <label for="uname"><b>Username</b></label>
+        <input type="text" placeholder="Email" name="uname" required />
+        <script src="ValidEmail.js"></script>
+        <label for="psw"><b>Password</b></label>
+        <input
+          type="password"
+          id="psw"
+          name="psw"
+          pattern="(?=.*\d)(?=.*[a-zа-яё])(?=.*[A-ZА-ЯЁ])(?=.*[0-9])(?=.*[~!@#$%^&*_|?]).{6,25}"
+          placeholder="Password"
+          required
+        />
+        <div id="message">
+          <label class="l1" id="letter" class="invalid">Low Register </label>
+          <label class="l1" id="capital" class="invalid">Hight Register</label>
+          <label class="l1" id="number" class="invalid">Numbers</label>
+          <label class="l1" id="length" class="invalid"
+            >Minimum 6 characters, max 25</label
+          >
+          <label class="l1" id="specsym" class="invalid">Spec symbols</label>
         </div>
-        <div class="container2">
-          <label>
-            <input type="checkbox" checked="checked" name="remember"> Remember Me
-          </label>
-          <button type="submit">Login</button>
-        </div>
-        <div class="container3">
-          <span class="psw"><a href="#">Forgot password?</a></span>
-        </div>
+
+        <script src="ValidPassw.js"></script>
+      </div>
+      <div class="container2">
+        <label>
+          <input type="checkbox" checked="checked" name="remember" /> Remember Me
+        </label>
+        <button type="submit">Login</button>
+      </div>
+      <div class="container3">
+        <span class="psw"><a href="#">Forgot password?</a></span>
+      </div>
     </form>
     <div class="container4"><span id="hours"></span></div>
     <script src="TimeSrc.js"></script>
-</body>
+  </body>
 </html>
